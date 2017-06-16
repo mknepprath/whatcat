@@ -5,7 +5,7 @@ navigator.getUserMedia = navigator.getUserMedia ||
                          navigator.mozGetUserMedia;
 
 
-var constraints = { video: { width: 1280, height: 720 } }; 
+var constraints = { video: { width: 1280, height: 720 } };
 
 function takepicture() {
   var video = $('video');
@@ -18,7 +18,7 @@ function takepicture() {
   canvas.width = width;
   canvas.height = height;
   context.drawImage(video[0], 0, 0, width, height);
-  
+
   var imageData = context.getImageData(0, 0, width, height);
   var data = canvas.toDataURL('image/png');
 
